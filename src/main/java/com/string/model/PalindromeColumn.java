@@ -6,7 +6,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 @AllArgsConstructor
 @Getter
-public enum BracketsColumn {
+public enum PalindromeColumn {
 
     BRACKETS(0);
 

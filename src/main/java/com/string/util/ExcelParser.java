@@ -1,6 +1,6 @@
 package com.string.util;
 
-import com.string.mapper.BracketsMapper;
+import com.string.mapper.PalindromeMapper;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,8 +17,8 @@ import java.util.List;
 @Component
 public class ExcelParser {
 
-    public List<String> parseExcelToBracketList(InputStream file) {
-        List<String> bracketsList = new ArrayList<>();
+    public List<String> parseExcelToNumberList(InputStream file) {
+        List<String> numberList = new ArrayList<>();
 
         Workbook workbook = null;
         try {
@@ -33,12 +33,12 @@ public class ExcelParser {
             if (isRowEmpty(row)) break;
             if (row.getRowNum() == 0) continue;
 
-            String brackets = BracketsMapper.buildBracketsList(row);
+            String brackets = PalindromeMapper.buildBracketsList(row);
 
-            bracketsList.add(brackets);
+            numberList.add(brackets);
         }
 
-        return bracketsList;
+        return numberList;
     }
 
     private boolean isRowEmpty(Row row) {
