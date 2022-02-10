@@ -2,11 +2,11 @@ package com.string.mapper;
 
 import org.apache.poi.ss.usermodel.Row;
 
-import static com.string.model.PalindromeColumn.BRACKETS;
+import static com.string.model.PalindromeColumn.PALINDROME;
 
 public class PalindromeMapper {
 
-    public static String buildBracketsList(Row row) {
-        return BRACKETS.getValue(row);
+    public static String buildNumberList(Row row) {
+        return PALINDROME.getValue(row);
     }
 }

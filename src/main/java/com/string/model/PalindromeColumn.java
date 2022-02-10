@@ -8,7 +8,7 @@ import org.apache.poi.ss.usermodel.Row;
 @Getter
 public enum PalindromeColumn {
 
-    BRACKETS(0);
+    PALINDROME(0);
 
     private int columnNumber;
 

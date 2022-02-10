@@ -33,7 +33,7 @@ public class ExcelParser {
             if (isRowEmpty(row)) break;
             if (row.getRowNum() == 0) continue;
 
-            String brackets = PalindromeMapper.buildBracketsList(row);
+            String brackets = PalindromeMapper.buildNumberList(row);
 
             numberList.add(brackets);
         }
